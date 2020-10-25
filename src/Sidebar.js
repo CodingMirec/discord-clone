@@ -8,6 +8,9 @@ import AddIcon from "@material-ui/icons/Add";
 import SignalCellularAltIcon from "@material-ui/icons/SignalCellularAlt";
 import CallIcon from "@material-ui/icons/Call";
 import InfoOutlinedIcon from "@material-ui/icons/InfoOutlined";
+import MicIcon from "@material-ui/icons/Mic";
+import HeadsetIcon from "@material-ui/icons/Headset";
+import SettingsIcon from "@material-ui/icons/Settings";
 
 import "./Sidebar.css";
 
@@ -53,13 +56,17 @@ function Sidebar() {
       </div>
 
       <div className="sidebar__profile">
-        <Avatar />
+        <Avatar src="https://scontent-vie1-1.cdninstagram.com/v/t51.2885-19/s150x150/22639225_145197616099744_2920494765331972096_n.jpg?_nc_ht=scontent-vie1-1.cdninstagram.com&_nc_ohc=wMNLYn20TE8AX8NHVMP&oh=ad92bcd8ce052f47a1289d6ac7f0d810&oe=5FBF6BB0" />
         <div className="sidebar__profileInfo">
           <h3>Mireec</h3>
           <p>#thisIsID</p>
         </div>
 
-        <div className="sidebar__profileIcons"></div>
+        <div className="sidebar__profileIcons">
+          <MicIcon />
+          <HeadsetIcon />
+          <SettingsIcon />
+        </div>
       </div>
     </div>
   );
