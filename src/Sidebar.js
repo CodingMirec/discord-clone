@@ -1,5 +1,7 @@
 import React from "react";
 import { Avatar } from "@material-ui/core";
+import { useSelector } from "react-redux";
+import { selectUser } from "./features/userSlice";
 
 import SidebarChannel from "./SidebarChannel";
 
@@ -15,6 +17,8 @@ import SettingsIcon from "@material-ui/icons/Settings";
 import "./Sidebar.css";
 
 function Sidebar() {
+  const user = useSelector(selectUser);
+  console.log(user.uid);
   return (
     <div className="sidebar">
       <div className="sidebar__top">
@@ -56,10 +60,10 @@ function Sidebar() {
       </div>
 
       <div className="sidebar__profile">
-        <Avatar src="https://scontent-vie1-1.cdninstagram.com/v/t51.2885-19/s150x150/22639225_145197616099744_2920494765331972096_n.jpg?_nc_ht=scontent-vie1-1.cdninstagram.com&_nc_ohc=wMNLYn20TE8AX8NHVMP&oh=ad92bcd8ce052f47a1289d6ac7f0d810&oe=5FBF6BB0" />
+        <Avatar src={user.photo} />
         <div className="sidebar__profileInfo">
-          <h3>Mireec</h3>
-          <p>#thisIsID</p>
+          <h3>{user.displayName}</h3>
+          <p>#{user.uid}</p>
         </div>
 
         <div className="sidebar__profileIcons">
